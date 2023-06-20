@@ -1,2 +1,6 @@
 distilbert-base-uncased-Conscientiousness-classification-shuffled/
 distilbert-base-uncased-Openness-classification-shuffled/
+distilbert-base-uncased*
+feature/
+wandb
+

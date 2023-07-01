@@ -4,3 +4,6 @@ distilbert-base-uncased*
 feature/
 wandb
 
+jobs/.ipynb_checkpoints/cloud_run_script-checkpoint.py
+jobs/.ipynb_checkpoints/local_run-checkpoint.sh
+.ipynb_checkpoints/eda-checkpoint.ipynb

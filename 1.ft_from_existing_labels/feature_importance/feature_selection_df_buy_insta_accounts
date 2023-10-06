@@ -1,0 +1,50 @@
+df_buy_insta_accounts
+Feature importance for trait:Openness
+                Specs        Score
+1         media_count  9964.018248
+5            AvgLikes  5721.839747
+2     following_count   215.022745
+6         AvgComments    13.053617
+4  engagement_percent    10.936013
+0                Type     4.009461
+3      follower_count     2.639882
+df_buy_insta_accounts
+Feature importance for trait:Conscientiousness
+                Specs         Score
+5            AvgLikes  89459.890568
+1         media_count   2248.396598
+2     following_count    457.252365
+6         AvgComments    218.005926
+4  engagement_percent    175.613767
+0                Type      1.185959
+3      follower_count      0.103271
+df_buy_insta_accounts
+Feature importance for trait:Extroversion
+                Specs        Score
+5            AvgLikes  6288.760408
+1         media_count  1109.816483
+2     following_count    65.741927
+6         AvgComments    55.482504
+4  engagement_percent    11.949704
+0                Type     3.262586
+3      follower_count     0.497454
+df_buy_insta_accounts
+Feature importance for trait:Agreeableness
+                Specs          Score
+5            AvgLikes  112204.855550
+1         media_count    5484.747276
+2     following_count    1327.837133
+4  engagement_percent     218.606025
+6         AvgComments      95.881165
+0                Type      10.182420
+3      follower_count       1.228414
+df_buy_insta_accounts
+Feature importance for trait:Neuroticism
+                Specs         Score
+5            AvgLikes  97778.585260
+1         media_count   6125.269429
+2     following_count   1529.401988
+4  engagement_percent    190.388015
+6         AvgComments    120.685394
+0                Type     10.593106
+3      follower_count      0.315091

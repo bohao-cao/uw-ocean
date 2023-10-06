@@ -1,0 +1,50 @@
+df_buy_biz
+Feature importance for trait:Openness
+                Specs         Score
+3      follower_count  1.083954e+06
+2     following_count  5.416734e+03
+5            AvgLikes  2.346977e+03
+1         media_count  2.112897e+03
+6         AvgComments  5.922729e+01
+0                Type  1.221281e+00
+4  engagement_percent  9.671735e-01
+df_buy_biz
+Feature importance for trait:Conscientiousness
+                Specs         Score
+3      follower_count  38186.021155
+2     following_count  14053.403558
+1         media_count   4150.088816
+5            AvgLikes    982.631411
+6         AvgComments     53.833548
+4  engagement_percent      0.517969
+0                Type      0.020058
+df_buy_biz
+Feature importance for trait:Extroversion
+                Specs          Score
+3      follower_count  416409.561746
+1         media_count    5977.638446
+2     following_count    5745.987763
+5            AvgLikes    1720.497584
+6         AvgComments      40.087048
+4  engagement_percent       0.690293
+0                Type       0.517353
+df_buy_biz
+Feature importance for trait:Agreeableness
+                Specs          Score
+3      follower_count  756488.677864
+2     following_count    8079.277502
+5            AvgLikes    3415.054053
+1         media_count    2369.745468
+6         AvgComments       6.334565
+0                Type       1.317740
+4  engagement_percent       0.413272
+df_buy_biz
+Feature importance for trait:Neuroticism
+                Specs          Score
+3      follower_count  658139.173353
+1         media_count    3340.288279
+5            AvgLikes    1913.701290
+2     following_count     658.352053
+6         AvgComments       8.574216
+0                Type       1.739478
+4  engagement_percent       0.546956

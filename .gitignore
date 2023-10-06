@@ -7,3 +7,4 @@ wandb
 jobs/.ipynb_checkpoints/cloud_run_script-checkpoint.py
 jobs/.ipynb_checkpoints/local_run-checkpoint.sh
 .ipynb_checkpoints/eda-checkpoint.ipynb
+3.liwc_based_ft/models/**

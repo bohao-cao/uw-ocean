@@ -12,7 +12,7 @@ import traceback
 # go to: https://developers.facebook.com/tools/explorer/
 # to get token
 # this token is good till August 17th
-token=os.getenv("TOKEN", "EAACccrMmWa0BADfzJo29BrO461qM6gfPvoWjez5iIjoqUYf6qC2lnaFqC5Ko8pWh5Ila8QmLfWPzrrZCpqbu548TatirmZBdYQlLclOLFrDLjrrcGteHUG1NaNjJIKzUgDSQxxMoWmZCTBOstFIaCsAfiZCWlm6Jpt7OjYkggwZDZD")
+token=os.getenv("TOKEN", "EAACccrMmWa0BO6Cn4KkeaYCh18ZAm62pRr6TiNyBj1CA6cQEPFZBr00KUQoTm5K8fXt1gdZB8ZCDcEBEHLC9nRdowBiPyxjqxFkE3pD0IoXEPhc1rjs3mIufrHeIh8DmQEDT41kYmxbZC6LZB1DZBvizuqyj6TqBrYgT6nJ8ZCqTPt3OinFJtgyytKxtqJllios7CELVldeHUpMlS9C9rfPDiI8h")
 file_name = os.getenv("file_name") 
 sleep = os.getenv("sleep", 1800)
 block_size = os.getenv("block_size", 100)
@@ -82,7 +82,7 @@ def get_biz_discovery_e2e(usernames, dest_folder, scraped_users, sleep_sec=3600)
         if type(res) in [str, dict]:
             bad_users.append({ig_username: res})
         elif isinstance(res, pd.DataFrame):
-            res.to_parquet(f"feature/{dest_folder}/{ig_username}.parquet")
+            res.to_parquet(f"scraped_posts/{dest_folder}/{ig_username}.parquet")
     
     return bad_users
 
@@ -93,7 +93,7 @@ def get_df(file_name):
 
 def get_scraped_users(dest_folder):
     scraped_users = []
-    for entry in Path(f"feature/{dest_folder}").iterdir():
+    for entry in Path(f"scraped_posts/{dest_folder}").iterdir():
         # check if it a file
         if entry.is_file():
             scraped_users.append(entry.stem)
@@ -104,13 +104,13 @@ def main(file_name, sleep, block_size):
     df = get_df(file_name)
     dest_folder = file_name.split(".")[0]
     try:
-        os.mkdir(f"feature/{dest_folder}")
+        os.mkdir(f"scraped_posts/{dest_folder}")
     except:
         pass
 
     #usernames = df[df['Openness'].isna()]['username']
     usernames = df['username']
-    num_chunk = len(usernames)//block_size
+    num_chunk = len(usernames)//int(block_size)
     print(f"total of usernames: {len(usernames)}")
     print(f"divide in to {num_chunk} chunks")
     
@@ -118,7 +118,7 @@ def main(file_name, sleep, block_size):
         scraped_users = set(get_scraped_users(dest_folder))
         bad_users = get_biz_discovery_e2e(chunk, dest_folder, scraped_users, sleep)
         print(f"Iteration {i}/{num_chunk} has {len(bad_users)} bad users, {len(scraped_users)} already scraped users.")
-        with open(f"feature/{dest_folder}/bad_users_idx.json", "a") as outfile:
+        with open(f"scraped_posts/{dest_folder}/bad_users_idx.json", "a") as outfile:
             json.dump(bad_users, outfile)
 if __name__ == "__main__":
     try:

@@ -8,3 +8,9 @@ jobs/.ipynb_checkpoints/cloud_run_script-checkpoint.py
 jobs/.ipynb_checkpoints/local_run-checkpoint.sh
 .ipynb_checkpoints/eda-checkpoint.ipynb
 3.liwc_based_ft/models/**
+0.instagram_post_scraping/data/**
+0.instagram_post_scraping/scraped_posts/missing_users/**t
+3.liwc_based_ft/liwc_personality_raw_scores/**
+0.instagram_post_scraping/scraped_posts/missing_users_10/busywifesociallife.parquet
+3.liwc_based_ft/models_350words/**
+0.instagram_post_scraping/scraped_posts/**
